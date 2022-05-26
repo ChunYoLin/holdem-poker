@@ -36,5 +36,12 @@
       "**/test/**/*.[jt]s?(x)",
       "**/?(*.)+(spec|test).[jt]s?(x)"
     ]
+  },
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.35",
+    "express": "^4.18.1",
+    "holdem-poker": "^0.2.0",
+    "http": "^0.0.1-security"
   }
 }
