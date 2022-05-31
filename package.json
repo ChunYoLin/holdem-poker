@@ -28,8 +28,9 @@
   "devDependencies": {
     "browserify": "^16.5.0",
     "jest": "^24.9.0",
+    "ts-node": "^10.8.0",
     "tsify": "^4.0.1",
-    "typescript": "^3.5.3"
+    "typescript": "^3.9.10"
   },
   "jest": {
     "testMatch": [

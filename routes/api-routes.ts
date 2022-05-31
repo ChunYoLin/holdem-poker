@@ -15,5 +15,6 @@ export class ApiRouter {
     initializeRoutes() {
         this.router.use(express.json());
         this.router.get('/createNewGame', this.pokerController.createNewGame);
+        this.router.get('/addNewPlayer', this.pokerController.addNewPlayer);
     }
 }

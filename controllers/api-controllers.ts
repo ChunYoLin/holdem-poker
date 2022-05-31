@@ -1,6 +1,6 @@
 // controllers/api-controllers.ts
 import { Request, Response, NextFunction } from 'express';
-import { Game2 } from '../src/Game2';
+import { Game2, Player } from '../src/Game2';
 
 export var curGames = new Map<string, Game2>();
 
@@ -18,7 +18,12 @@ export class PokerController {
     }
     addNewPlayer(request: Request, response: Response, next: NextFunction) {
         var playerConfig = request.query;
-        var name = playerConfig['name'];
-        var game = playerConfig['id'];
+        var name: string = playerConfig.name?.toString()!;
+        var gameId: string = playerConfig.id?.toString()!;
+        let game = curGames.get(gameId);
+        if (game != undefined)
+            game.addPlayer(new Player(name, game));
+        console.log(game)
+        response.send(game);
     }
 }
